@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#078096 -25%, black 20%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: linear-gradient(#078096 -25%, #07819657 20%);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  height: 40px;
+  width: 90%;
+  border: 2px solid black;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+input[type="text"] {
+  width: 97%;
+  padding: 7px;
+  margin-bottom: 20px;
+  border-radius: 28px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.company-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.company-list li {
+  background: #e9f5f7;
+  margin: 1px 0;
+  border-radius: 5px;
+  border: 1px solid rgb(82, 76, 76);
+  transition: background 0.3s;
+}
+
+.company-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.company-list li:hover {
+  background: #bdd0d3;
+  cursor: pointer;
+}
+
+
+
+.logo {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #078096;
+}

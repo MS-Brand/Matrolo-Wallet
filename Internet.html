@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Bill</title>
+  <link rel="stylesheet" href="internet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+     <div class="container">
+    <h1>Internet Bill</h1>
+    <input type="text" id="searchInput" placeholder="Search company..." onkeyup="filterList()" />
+    <ul class="company-list" id="companyList">
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSG63jDm5EPphXsE9s7KlxLPQbOE_1MUhPvg&s');"></div>
+          Nayatel <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032012/ptcl-logo.png?itok=9ZKpbJfV');"></div>
+          PTCL <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTAVCvNRO32nhzVBCOGBedAALNO0TOvwvx2w&s');"></div>
+          Transworld <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/f/ff/Wateen.png');"></div>
+          Wateen <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLUsRg3og6PZf3mfCY7BPMpPDZZf6YYXO09g&s');"></div>
+          Waylink <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT0qW85_ua7hOvayvp1ukVMnA1Yo-pY97l_w&s');"></div>
+          Wi-Tribe <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCL6nQs6qjKFJ7BZKJG03do5szAzjMAfXUZw&s');"></div>
+          Optix <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69F7o4FOMfkaGP55O6fsG6NWTwXaeBwkU9A&s');"></div>
+          WorldCall <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm7zK8ZzIulO6xnplUAVr4boF890zdJyQJyQ&s');"></div>
+          Optome <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://i.pinimg.com/736x/f1/90/0c/f1900c21d80c09ca03ca2a80460d2226.jpg');"></div>
+          Fiber Link <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX1df3ajWA8Y9_MfpXca5BfVMWEaRbMKHNew&s');"></div>
+          HC Cable Net Pvt Ltd <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo2Kih_rA_dirYhrw2oiZeutnCw3pF34QaBA&s');"></div>
+          Qubee <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDVJIRalKz0g1botUBWFqpbiXZZ6U3BAyEQQ&s');"></div>
+          COMSATS Internet Service <span class="arrow">›</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="logo" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvpAuSwLD_JN2yZKZm9WKbHv3HxkdiaVJO5Q&s');"></div>
+          Connect Communications <span class="arrow">›</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function filterList() {
+      const input = document.getElementById("searchInput").value.toUpperCase();
+      const list = document.getElementById("companyList").getElementsByTagName("li");
+      for (let i = 0; i < list.length; i++) {
+        const a = list[i].textContent.toUpperCase();
+        list[i].style.display = a.includes(input) ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>

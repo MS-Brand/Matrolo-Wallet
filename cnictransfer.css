@@ -1,0 +1,95 @@
+body {
+  background-color: #121213;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.menu button1 {
+  background-color: #078096;
+  color: white;
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 2px;
+  border: 2px solid #3a3a3b;
+
+}
+
+.menu a i{
+  font-size: 20px;
+  background-color: #078096;
+  color: white;
+  text-decoration:solid;
+
+}
+
+.form-container {
+  position: fixed;
+  background-color: #078096;
+  padding: 30px;
+  border-radius: 10px;
+
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  height: 40px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  color: black;
+  position: relative;
+  top: -6px;
+  font-weight: bold;
+}
+
+
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

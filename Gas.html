@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Bill</title>
+  <link rel="stylesheet" href="gas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gas Bill</h1>
+        <input type="text" id="searchInput" placeholder="Search Company..." onkeyup="filterList()" />
+        <ul class="company-list" id="companyList">
+          <li><a href="#">SNGPL <span class="arrow">›</span></a></li>
+          <li><a href="#">SSGC <span class="arrow">›</span></a></li>
+        </ul>
+      </div>
+    
+      <script>
+        function filterList() {
+          const input = document.getElementById("searchInput").value.toUpperCase();
+          const list = document.getElementById("companyList").getElementsByTagName("li");
+          for (let i = 0; i < list.length; i++) {
+            const a = list[i].textContent.toUpperCase();
+            list[i].style.display = a.includes(input) ? "" : "none";
+          }
+        }
+      </script>
+    </body>
+    </html>

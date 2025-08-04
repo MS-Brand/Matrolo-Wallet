@@ -1,0 +1,84 @@
+
+body {
+  background-color: #2a2a2e;
+
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  margin: 20px 30px;
+}
+
+.menu button {
+  background-color: #078096;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu a {
+  font-size: 18px;
+  background-color: #078096;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.border {
+  height: 350px;
+  width: 450px;
+  background-color: #078096;
+  margin: 70px auto 0 auto;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+}
+
+.border h1 {
+  text-align: center;
+  background-color: #078096;
+  color: black;
+  border-radius: 50px;
+  border: 2px solid black;
+  padding: 10px 0;
+}
+
+.border h2{
+  text-align: left;
+  margin-top: -20px;
+  color: black;
+}
+.border h3{
+  text-align: left;
+  font-size: 25px;
+  margin-top: -10px;
+  color: black;
+}
+.border input {
+  width: 90%;
+  padding: 10px;
+  position: relative;
+  top: -30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+}
+.border button{
+  background-color: #242525;
+  color: rgb(27, 162, 185);
+  padding: 10px 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 170px;
+  margin-top: -20px;
+}
+.border a{
+  font-size: 18px;
+  background-color: #242525;
+  color: rgb(27, 162, 185);
+  text-decoration: none;
+  border-radius: 4px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Money via CNIC</title>
+  <link rel="stylesheet" href="cnictransfer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="menu">
+    <button1><a href="home.html"><i class="fa-solid fa-chevron-left"></i></a></button>
+  </div>
+  <div class="form-container">
+    <h2>Send Money via CNIC</h2>
+    <form>
+      <label for="cnic">Recipient CNIC Number:</label>
+      <input type="text" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
+
+      <label for="mobile">Recipient Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="03XX-XXXXXXX" pattern="[0-9]{11}" maxlength="11" required>
+
+      <label for="purpose">Select Purpose of Payment:</label>
+      <select id="purpose" name="purpose" required>
+        <option value="">-- Select --</option>
+        <option value="family">Family Support</option>
+        <option value="salary">Salary</option>
+        <option value="gift">Gift</option>
+        <option value="loan">Loan</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit" class="">Next</button>
+    </form>
+  </div>
+
+  <script>
+    //for cnic button working
+  const form = document.querySelector('form');
+  const inputs = form.querySelectorAll('input, select');
+  const button = form.querySelector('button');
+
+  function checkInputs() {
+    let allFilled = true;
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        allFilled = false;
+      }
+    });
+    button.disabled = !allFilled;
+    button.style.opacity = allFilled ? '1' : '0.5';
+    button.style.cursor = allFilled ? 'pointer' : 'not-allowed';
+  }
+
+  inputs.forEach(input => {
+    input.addEventListener('input', checkInputs);
+  });
+
+  checkInputs(); // Initial check on load
+
+  //for cnic input setup auto slash
+  const cnicInput = document.getElementById('cnic');
+
+  cnicInput.addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // Remove all non-digits
+
+    // Auto insert dashes
+    /*if (value.length > 5 && value.length <= 12) {
+      value = value.slice(0, 5) + '-' + value.slice(5);
+    }*/
+    if (value.length > 12) {
+      value = value.slice(0, 5) + '-' + value.slice(5, 12) + '-' + value.slice(12, 13);
+    }
+
+    e.target.value = value;
+  });
+
+  // Prevent any non-digit key input
+  cnicInput.addEventListener('keypress', function (e) {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault();
+    }
+  });
+  </script>
+</body>
+</html>
